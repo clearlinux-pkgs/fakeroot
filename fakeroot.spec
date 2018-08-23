@@ -4,7 +4,7 @@
 #
 Name     : fakeroot
 Version  : 1.21
-Release  : 1
+Release  : 2
 URL      : http://http.debian.net/debian/pool/main/f/fakeroot/fakeroot_1.21.orig.tar.gz
 Source0  : http://http.debian.net/debian/pool/main/f/fakeroot/fakeroot_1.21.orig.tar.gz
 Summary  : No detailed summary available
@@ -13,6 +13,7 @@ License  : GPL-3.0
 Requires: fakeroot-bin
 Requires: fakeroot-license
 BuildRequires : acl-dev
+BuildRequires : attr-dev
 BuildRequires : automake
 BuildRequires : automake-dev
 BuildRequires : buildreq-cpan
@@ -67,7 +68,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1535022653
+export SOURCE_DATE_EPOCH=1535022719
 %reconfigure --disable-static
 make  %{?_smp_mflags}
 
@@ -79,7 +80,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1535022653
+export SOURCE_DATE_EPOCH=1535022719
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/fakeroot
 cp COPYING %{buildroot}/usr/share/doc/fakeroot/COPYING
