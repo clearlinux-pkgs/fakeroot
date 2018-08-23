@@ -1,0 +1,10 @@
+--- fakeroot-1.21/Makefile.am~	2016-06-26 21:19:15.000000000 +0000
++++ fakeroot-1.21/Makefile.am	2018-08-23 11:07:30.694429830 +0000
+@@ -1,6 +1,6 @@
+ AUTOMAKE_OPTIONS=foreign
+ ACLOCAL_AMFLAGS = -I build-aux
+-SUBDIRS=scripts doc test
++SUBDIRS=scripts test
+ 
+ noinst_LTLIBRARIES = libcommunicate.la libmacosx.la
+ libcommunicate_la_SOURCES = communicate.c

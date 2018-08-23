@@ -1,0 +1,6 @@
+Configure miss: sys/feature_tests.h usability
+Configure miss: sys/feature_tests.h presence
+Configure miss: sys/feature_tests.h
+Configure miss: union semun
+Configure miss: fgetattrlist
+Configure miss: MacOS X/Darwin
