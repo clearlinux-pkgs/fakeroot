@@ -4,7 +4,7 @@
 #
 Name     : fakeroot
 Version  : 1.23
-Release  : 3
+Release  : 4
 URL      : http://http.debian.net/debian/pool/main/f/fakeroot/fakeroot_1.23.orig.tar.xz
 Source0  : http://http.debian.net/debian/pool/main/f/fakeroot/fakeroot_1.23.orig.tar.xz
 Summary  : No detailed summary available
