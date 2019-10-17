@@ -4,14 +4,15 @@
 #
 Name     : fakeroot
 Version  : 1.23
-Release  : 4
+Release  : 5
 URL      : http://http.debian.net/debian/pool/main/f/fakeroot/fakeroot_1.23.orig.tar.xz
 Source0  : http://http.debian.net/debian/pool/main/f/fakeroot/fakeroot_1.23.orig.tar.xz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
-Requires: fakeroot-bin
-Requires: fakeroot-license
+Requires: fakeroot-bin = %{version}-%{release}
+Requires: fakeroot-lib = %{version}-%{release}
+Requires: fakeroot-license = %{version}-%{release}
 BuildRequires : acl-dev
 BuildRequires : attr-dev
 BuildRequires : automake
@@ -35,20 +36,19 @@ listed below.
 %package bin
 Summary: bin components for the fakeroot package.
 Group: Binaries
-Requires: fakeroot-license
+Requires: fakeroot-license = %{version}-%{release}
 
 %description bin
 bin components for the fakeroot package.
 
 
-%package dev
-Summary: dev components for the fakeroot package.
-Group: Development
-Requires: fakeroot-bin
-Provides: fakeroot-devel
+%package lib
+Summary: lib components for the fakeroot package.
+Group: Libraries
+Requires: fakeroot-license = %{version}-%{release}
 
-%description dev
-dev components for the fakeroot package.
+%description lib
+lib components for the fakeroot package.
 
 
 %package license
@@ -67,23 +67,28 @@ license components for the fakeroot package.
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1535345014
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1571332263
+export GCC_IGNORE_WERROR=1
+export CFLAGS="$CFLAGS -fno-lto "
+export FCFLAGS="$CFLAGS -fno-lto "
+export FFLAGS="$CFLAGS -fno-lto "
+export CXXFLAGS="$CXXFLAGS -fno-lto "
 %reconfigure --disable-static
 make  %{?_smp_mflags}
 
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1535345014
+export SOURCE_DATE_EPOCH=1571332263
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/doc/fakeroot
-cp COPYING %{buildroot}/usr/share/doc/fakeroot/COPYING
+mkdir -p %{buildroot}/usr/share/package-licenses/fakeroot
+cp %{_builddir}/fakeroot-1.23/COPYING %{buildroot}/usr/share/package-licenses/fakeroot/842745cb706f8f2126506f544492f7a80dbe29b3
 %make_install
 
 %files
@@ -94,11 +99,11 @@ cp COPYING %{buildroot}/usr/share/doc/fakeroot/COPYING
 /usr/bin/faked
 /usr/bin/fakeroot
 
-%files dev
+%files lib
 %defattr(-,root,root,-)
 /usr/lib64/libfakeroot-0.so
 /usr/lib64/libfakeroot.so
 
 %files license
-%defattr(-,root,root,-)
-/usr/share/doc/fakeroot/COPYING
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/fakeroot/842745cb706f8f2126506f544492f7a80dbe29b3
