@@ -1,5 +1,5 @@
 PKG_NAME := fakeroot
-URL = http://http.debian.net/debian/pool/main/f/fakeroot/fakeroot_1.23.orig.tar.xz
+URL = https://mirrors.kernel.org/debian/pool/main/f/fakeroot/fakeroot_1.24.orig.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
