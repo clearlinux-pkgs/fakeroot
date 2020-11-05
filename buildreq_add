@@ -2,3 +2,5 @@
 # picked up automatically. One name per line, no whitespace.
 attr-dev
 acl-dev
+# the test suite requires `getopt`
+util-linux

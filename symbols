@@ -39,6 +39,7 @@ libfakeroot-0.so:get_libc
 libfakeroot-0.so:getegid
 libfakeroot-0.so:geteuid
 libfakeroot-0.so:getgid
+libfakeroot-0.so:getgroups
 libfakeroot-0.so:getresgid
 libfakeroot-0.so:getresuid
 libfakeroot-0.so:getuid
@@ -84,6 +85,7 @@ libfakeroot-0.so:setuid
 libfakeroot-0.so:setxattr
 libfakeroot-0.so:stat32from64
 libfakeroot-0.so:stat64from32
+libfakeroot-0.so:statx
 libfakeroot-0.so:tmp___fxstat
 libfakeroot-0.so:tmp___fxstat64
 libfakeroot-0.so:tmp___fxstatat
@@ -114,6 +116,7 @@ libfakeroot-0.so:tmp_fts_read
 libfakeroot-0.so:tmp_getegid
 libfakeroot-0.so:tmp_geteuid
 libfakeroot-0.so:tmp_getgid
+libfakeroot-0.so:tmp_getgroups
 libfakeroot-0.so:tmp_getresgid
 libfakeroot-0.so:tmp_getresuid
 libfakeroot-0.so:tmp_getuid
@@ -146,6 +149,7 @@ libfakeroot-0.so:tmp_setresuid
 libfakeroot-0.so:tmp_setreuid
 libfakeroot-0.so:tmp_setuid
 libfakeroot-0.so:tmp_setxattr
+libfakeroot-0.so:tmp_statx
 libfakeroot-0.so:tmp_unlink
 libfakeroot-0.so:tmp_unlinkat
 libfakeroot-0.so:unlink

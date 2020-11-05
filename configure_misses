@@ -3,4 +3,6 @@ Configure miss: sys/feature_tests.h presence
 Configure miss: sys/feature_tests.h
 Configure miss: union semun
 Configure miss: fgetattrlist
+Configure miss: library containing acl_trivial
+Configure miss: acl_trivial
 Configure miss: MacOS X/Darwin
