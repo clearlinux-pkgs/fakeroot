@@ -1,8 +1,7 @@
-Configure miss: sys/feature_tests.h usability
-Configure miss: sys/feature_tests.h presence
+Configure miss: MacOS X/Darwin
+Configure miss: acl_trivial
+Configure miss: fgetattrlist
+Configure miss: gcc options needed to detect all undeclared functions
+Configure miss: library containing acl_trivial
 Configure miss: sys/feature_tests.h
 Configure miss: union semun
-Configure miss: fgetattrlist
-Configure miss: library containing acl_trivial
-Configure miss: acl_trivial
-Configure miss: MacOS X/Darwin
