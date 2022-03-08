@@ -1,5 +1,7 @@
---- fakeroot-1.21/Makefile.am~	2016-06-26 21:19:15.000000000 +0000
-+++ fakeroot-1.21/Makefile.am	2018-08-23 11:07:30.694429830 +0000
+diff --git a/Makefile.am b/Makefile.am
+index 76210b5..958205b 100644
+--- a/Makefile.am
++++ b/Makefile.am
 @@ -1,6 +1,6 @@
  AUTOMAKE_OPTIONS=foreign
  ACLOCAL_AMFLAGS = -I build-aux
