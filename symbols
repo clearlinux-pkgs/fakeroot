@@ -64,7 +64,6 @@ libfakeroot-0.so:mkdir
 libfakeroot-0.so:mkdirat
 libfakeroot-0.so:mknod
 libfakeroot-0.so:mknodat
-libfakeroot-0.so:openat
 libfakeroot-0.so:remove
 libfakeroot-0.so:removexattr
 libfakeroot-0.so:rename
@@ -143,7 +142,6 @@ libfakeroot-0.so:tmp_lremovexattr
 libfakeroot-0.so:tmp_lsetxattr
 libfakeroot-0.so:tmp_mkdir
 libfakeroot-0.so:tmp_mkdirat
-libfakeroot-0.so:tmp_openat
 libfakeroot-0.so:tmp_remove
 libfakeroot-0.so:tmp_removexattr
 libfakeroot-0.so:tmp_rename
