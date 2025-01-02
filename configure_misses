@@ -1,7 +1,6 @@
 Configure miss: acl_trivial
 Configure miss: fgetattrlist
 Configure miss: gcc options needed to detect all undeclared functions
-Configure miss: if we need to cope with time64
 Configure miss: library containing acl_trivial
 Configure miss: macOS/Darwin
 Configure miss: sys/feature_tests.h
